@@ -444,7 +444,6 @@
     width: 100%;
     height: 100%;
     border: none;
-    filter: sepia(0.4) brightness(0.7) contrast(1.1);
     min-height: 300px;
   }
 
@@ -821,6 +820,9 @@
   <a href="tel:+522222978062" class="btn-primary">
     &nbsp;LLAMAR AHORA
   </a>
+  <button onclick="irAWhatsApp()" class="btn-primary">
+    &nbsp; WHATSAPP &nbsp;
+  </button>
 </div>
 
 <!-- FOOTER -->
@@ -828,6 +830,15 @@
   <div class="logo-sm">PARÍS HERMANOS · FOTOGRAFÍA &amp; VIDEO</div>
   <p>Centro Histórico · Heroica Puebla de Zaragoza · Tel. 222 297 8062</p>
 </footer>
-
+<script>
+  function irAWhatsApp() {
+    const telefono = "5212221358150";
+    const mensaje = "Hola, me gustaría obtener más información sobre sus servicios de fotografía y video.";
+    
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    
+    window.open(url, '_blank');
+  }
+</script>
 </body>
 </html>
